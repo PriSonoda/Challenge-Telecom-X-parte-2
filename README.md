@@ -1,29 +1,35 @@
-📊 Challenge Telecom X – Parte 2
+📊 Telecom X – Parte 2
+Previsão de churn e análise dos fatores de evasão
 
-Nesta etapa, avancei da análise exploratória para a modelagem preditiva de churn, preparando os dados, treinando modelos e avaliando seu desempenho. O objetivo foi identificar clientes com maior risco de evasão e entender quais variáveis mais influenciam o cancelamento.
+🎯 Objetivo
+Prever o churn de clientes com base em variáveis relevantes, identificar os fatores que mais influenciam a evasão e apoiar estratégias de retenção usando modelos de Machine Learning.
 
-🔧 O que foi feito
-
-- Tratamento dos dados, encoding e normalização
-- Separação em treino e teste
-- Treino dos modelos: Regressão Logística, KNN, Decision Tree e Random Forest
-- Avaliação com Accuracy, Recall, Precision, F1-Score e Matriz de Confusão
-
-🤖 Desempenho dos modelos
-
-O Random Forest apresentou o melhor desempenho e maior capacidade de generalização, enquanto a Decision Tree mostrou sinais de overfitting.
-
-🔍 Principais fatores de churn
-
-- Tempo de contrato
-- Total gasto
-- Tipo de contrato (mensal)
-- Serviços contratados
-- Método de pagamento
+📁 Estrutura do Projeto
+- notebook.ipynb – análise completa, EDA, preparação dos dados e modelos
+- /data – arquivos CSV tratados
   
-🎯 Recomendações
+🔧 Preparação dos Dados
+- Variáveis numéricas: tenure, MonthlyCharges, TotalCharges
+- Variáveis categóricas: Contract, PaymentMethod, InternetService etc.
+- Aplicação de One-Hot Encoding
+- Normalização das variáveis numéricas
+- Separação em treino e teste
+- Escolhas feitas para permitir que todos os modelos lidassem corretamente com escalas e categorias
+  
+📊 EDA – Principais Insights
+- Contratos mensais têm maior risco de churn
+- Clientes com pouco tempo de contrato cancelam mais
+- Electronic Check aparece com maior taxa de evasão
+- Valores mensais altos aumentam o risco
+- Gráficos usados: distribuição de churn, boxplots, barras por contrato, heatmap
+  
+🤖 Modelos Utilizados
+Regressão Logística, KNN, Decision Tree e Random Forest (melhor desempenho geral).
 
-- Acompanhar clientes nos primeiros meses
-- Incentivar contratos mais longos
-- Ajustar serviços que geram insatisfação
-- Estimular métodos de pagamento mais estáveis
+▶️ Como Executar
+Bibliotecas necessárias: pandas, numpy, seaborn, matplotlib, scikit-learn
+- Baixe ou clone o repositório
+- Abra o notebook.ipynb
+- Carregue os arquivos da pasta /data
+- Execute as células na ordem
+
